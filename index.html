@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/icons/icon-192.svg" type="image/svg+xml" />
+    <title>NutriAura SaaS</title>
+    <style>
+      :root { color-scheme: light dark; font-family: Inter, system-ui, sans-serif; }
+      body { margin: 0; background: #020617; color: #e2e8f0; }
+      .container { max-width: 780px; margin: 0 auto; padding: 24px; }
+      .card { background: #0f172a; border: 1px solid #334155; border-radius: 12px; padding: 20px; }
+      button { border: 0; background: #22c55e; color: #052e16; padding: 10px 14px; border-radius: 8px; font-weight: 700; }
+      .muted { color: #94a3b8; }
+      .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+      .pill { background: #1e293b; border-radius: 999px; padding: 8px 12px; display: inline-block; }
+      input { width: 100%; box-sizing: border-box; border-radius: 8px; border: 1px solid #334155; padding: 10px; background: #0b1220; color: #e2e8f0; }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>NutriAura</h1>
+      <p class="muted">MVP SaaS + PWA para acompanhamento nutricional.</p>
+
+      <section class="card">
+        <h2>Checklist do MVP</h2>
+        <div class="grid" id="features"></div>
+      </section>
+
+      <section class="card" style="margin-top: 12px;">
+        <h2>Plano diário (offline)</h2>
+        <label for="meal">Refeição de hoje</label>
+        <input id="meal" placeholder="Ex.: Frango + arroz integral + salada" />
+        <button id="save" style="margin-top: 8px;">Salvar localmente</button>
+        <p id="status" class="pill" style="margin-top: 10px;">Sem dados salvos</p>
+      </section>
+
+      <section class="card" style="margin-top: 12px;">
+        <h2>Instalação no celular</h2>
+        <ol>
+          <li>Abrir no navegador do celular.</li>
+          <li>Escolher <strong>Adicionar à tela inicial</strong>.</li>
+          <li>Testar modo avião para validar uso offline.</li>
+        </ol>
+      </section>
+    </main>
+
+    <script src="/main.js" type="module"></script>
+  </body>
+</html>
